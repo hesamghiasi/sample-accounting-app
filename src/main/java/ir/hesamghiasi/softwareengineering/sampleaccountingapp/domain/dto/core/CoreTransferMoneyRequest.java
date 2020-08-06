@@ -17,5 +17,5 @@ import javax.validation.constraints.NotEmpty;
 public class CoreTransferMoneyRequest {
     private String withdrawalAccountId;
     private String depositAccountId;
-    private long transferAmount;
+    private float transferAmount;
 }

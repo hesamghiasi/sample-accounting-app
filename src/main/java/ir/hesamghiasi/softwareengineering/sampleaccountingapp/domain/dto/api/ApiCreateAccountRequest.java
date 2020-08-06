@@ -1,5 +1,6 @@
 package ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.api;
 
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.enums.ApiCurrency;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,9 +19,9 @@ import javax.validation.constraints.NotEmpty;
 public class ApiCreateAccountRequest {
     @NonNull @NotEmpty @NotBlank
     //// TODO: 8/6/20 national code validator
-    private String nationalCode;
+    private String personId;
     @NonNull @NotEmpty @NotBlank
-    private String currency;
+    private ApiCurrency currency;
     @Min(1)
-    private long balance;
+    private float balance;
 }

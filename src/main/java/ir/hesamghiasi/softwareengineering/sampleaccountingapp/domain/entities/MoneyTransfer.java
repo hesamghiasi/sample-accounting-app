@@ -10,17 +10,21 @@ import javax.persistence.*;
  * @author Hesam Ghiasi created on 8/6/20
  */
 @Entity
-@Table(name = "account")
+@Table(name = "money_transfer")
 @Data
-public class Account {
+public class MoneyTransfer {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
     @ManyToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name="person_id")
-    private Person person;
-    @Enumerated(EnumType.STRING)
-    private CoreCurrency coreCurrency;
-    private float balance;
+    @JoinColumn(name="withdraw_account_id")
+    private Account withdrawalAccount;
+    @ManyToOne(fetch= FetchType.LAZY)
+    @JoinColumn(name="deposit_account_id")
+    private Account depositAccount;
+    private float transferAmount;
+    @Temporal(TemporalType.TIMESTAMP)
+    private java.util.Date timestamp;
+
 }

@@ -21,5 +21,5 @@ public class ApiTransferRequest {
     @NonNull @NotEmpty @NotBlank
     private String depositAccountId;
     @Min(1)
-    private long transferAmount;
+    private float transferAmount;
 }

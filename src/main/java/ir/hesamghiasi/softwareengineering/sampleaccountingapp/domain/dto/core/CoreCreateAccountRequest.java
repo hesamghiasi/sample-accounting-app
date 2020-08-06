@@ -1,5 +1,6 @@
 package ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.core;
 
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.enums.CoreCurrency;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CoreCreateAccountRequest {
-    private String nationalCode;
-    private String currency;
-    private long balance;
+    private String personId;
+    private CoreCurrency currency;
+    private float balance;
 }

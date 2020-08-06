@@ -1,0 +1,14 @@
+package ir.hesamghiasi.softwareengineering.sampleaccountingapp.services.contracts;
+
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.core.CoreTransferMoneyRequest;
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.core.CoreTransferMoneyResponse;
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.exceptions.BalanceNotEnoughException;
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.exceptions.DepositAccountNotFoundException;
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.exceptions.WithdrawalAccountNotFoundException;
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.exceptions.WithdrawalAndDepositEqualityException;
+import org.springframework.stereotype.Service;
+
+@Service
+public interface TransferService {
+    CoreTransferMoneyResponse transferMoney(CoreTransferMoneyRequest coreRequest) throws DepositAccountNotFoundException, WithdrawalAccountNotFoundException, BalanceNotEnoughException, WithdrawalAndDepositEqualityException;
+}

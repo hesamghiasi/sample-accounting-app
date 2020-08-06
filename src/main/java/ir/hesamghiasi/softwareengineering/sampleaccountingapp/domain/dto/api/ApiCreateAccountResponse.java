@@ -1,5 +1,6 @@
 package ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.api;
 
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.enums.ApiCurrency;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ApiCreateAccountResponse {
     private String id;
-    private String nationalCode;
-    private String currency;
-    private long balance;
+    private String personId;
+    private ApiCurrency currency;
+    private float balance;
 }

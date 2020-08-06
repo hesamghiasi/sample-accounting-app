@@ -4,10 +4,9 @@ import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.core.Co
 import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.core.CoreCreateAccountResponse;
 import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.core.CoreTransferMoneyRequest;
 import ir.hesamghiasi.softwareengineering.sampleaccountingapp.domain.dto.core.CoreTransferMoneyResponse;
+import ir.hesamghiasi.softwareengineering.sampleaccountingapp.exceptions.PersonNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface AccountService {
-    CoreCreateAccountResponse createAccount(CoreCreateAccountRequest coreRequest);
-    CoreTransferMoneyResponse transferMoney(CoreTransferMoneyRequest coreRequest);
-}
+    CoreCreateAccountResponse createAccount(CoreCreateAccountRequest coreRequest) throws PersonNotFoundException;}

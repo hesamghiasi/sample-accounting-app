@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CoreUpdatePersonRequest {
+    private String personId;
     private String firstName;
     private String lastName;
     private String nationalCode;

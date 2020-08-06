@@ -16,7 +16,7 @@ public class Person {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-    protected String id;
+    private String id;
     private String firstName;
     private String lastName;
     private String nationalCode;
